@@ -6,7 +6,12 @@
       $data[$key] = htmlspecialchars(strip_tags($value), ENT_QUOTES);
     }
 
-    $columns = implode(", ", array_keys($data));
+    $keys = array_keys($data);
+    array_walk($keys, function(&$string) use ($con) { 
+      $string = mysqli_real_escape_string($con, $string);
+    });
+    $columns = implode(", ", $keys);
+
     array_walk($data, function(&$string) use ($con) { 
       $string = mysqli_real_escape_string($con, $string);
     });
@@ -31,7 +36,12 @@
       $data['gmailCheck'] = 'Да';
     }
 
-    $columns = implode(", ", array_keys($data));
+    $keys = array_keys($data);
+    array_walk($keys, function(&$string) use ($con) { 
+      $string = mysqli_real_escape_string($con, $string);
+    });
+    $columns = implode(", ", $keys);
+    
     array_walk($data, function(&$string) use ($con) { 
       $string = mysqli_real_escape_string($con, $string);
     });

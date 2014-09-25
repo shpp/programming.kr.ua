@@ -301,7 +301,7 @@ app.controller('last', function($scope, $http, FileUploader) {
     $http({
       method: 'POST',
       url: 'backend/saveCanvas.php',
-      data: $.param({ img: dataURL, filename: $scope.student.name }),
+      data: $.param({ img: dataURL, name: $scope.student.name }),
       headers: { 'Content-Type': 'application/x-www-form-urlencoded' }
     }).success(function(data) {
       angular.element('.addImg').empty();
@@ -314,7 +314,8 @@ app.controller('last', function($scope, $http, FileUploader) {
     });
   }
   var uploader = $scope.uploader = new FileUploader({
-    url: 'backend/upload.php'
+    url: 'backend/upload.php',
+    formData: { name: $scope.student.name }
   });
   uploader.filters.push({
     name: 'imageFilter',
