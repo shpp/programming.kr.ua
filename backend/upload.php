@@ -8,8 +8,8 @@
     
     echo $json;
   } else if (isset($_POST['name'])) {
-    $name = $_POST['name'];
-    $photo = 'students/'.$_POST['img'];
+    $name = htmlspecialchars(strip_tags($_POST['name']), ENT_QUOTES);
+    $photo = 'students/'.htmlspecialchars(strip_tags($_POST['img']), ENT_QUOTES);
     
     include 'db.php';
     $p = mysqli_real_escape_string($con, $photo);

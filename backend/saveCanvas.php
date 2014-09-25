@@ -1,7 +1,8 @@
 <?php
   define('UPLOAD_DIR', 'students/');
   $img = $_POST['img'];
-  $name = $_POST['filename'];
+  $name = htmlspecialchars(strip_tags($_POST['filename']), ENT_QUOTES);
+
   $img = str_replace('data:image/png;base64,', '', $img);
   $img = str_replace(' ', '+', $img);
   $data = base64_decode($img);
