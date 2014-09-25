@@ -1,0 +1,193 @@
+.sprite {
+  background-image: url('../img/spritesheet.png');
+  background-repeat: no-repeat;
+  display: block;
+  margin: 0 auto;
+  margin-top: 5px;
+  width: 60px;
+  height: 60px;
+}
+.sprite-AWS {
+  background-position: -10px -10px;
+}
+.sprite-Adobe_After_Effects {
+  background-position: -90px -10px;
+}
+.sprite-Adobe_Illustrator {
+  background-position: -170px -10px;
+}
+.sprite-Adobe_Photoshop {
+  background-position: -250px -10px;
+}
+.sprite-Arduino {
+  background-position: -330px -10px;
+}
+.sprite-CINEMA-4D {
+  background-position: -410px -10px;
+}
+.sprite-CSS3 {
+  background-position: -10px -90px;
+}
+.sprite-HTML5 {
+  background-position: -90px -90px;
+}
+.sprite-SQL {
+  background-position: -170px -90px;
+}
+.sprite-Swift {
+  background-position: -250px -90px;
+}
+.sprite-Unity {
+  background-position: -330px -90px;
+}
+.sprite-Vagrant {
+  background-position: -410px -90px;
+}
+.sprite-angular {
+  background-position: -10px -171px;
+}
+.sprite-apache {
+  background-position: -90px -171px;
+}
+.sprite-boost {
+  background-position: -170px -171px;
+}
+.sprite-bower {
+  background-position: -250px -171px;
+}
+.sprite-c {
+  background-position: -330px -171px;
+}
+.sprite-cplus {
+  background-position: -410px -171px;
+}
+.sprite-csharp {
+  background-position: -10px -251px;
+}
+.sprite-delphi {
+  background-position: -90px -251px;
+}
+.sprite-docker {
+  background-position: -170px -251px;
+}
+.sprite-dotnet {
+  background-position: -250px -251px;
+}
+.sprite-drupal {
+  background-position: -330px -251px;
+}
+.sprite-git {
+  background-position: -410px -251px;
+}
+.sprite-golang {
+  background-position: -10px -331px;
+}
+.sprite-grunt {
+  background-position: -90px -331px;
+}
+.sprite-gulp {
+  background-position: -170px -331px;
+}
+.sprite-ios-icon {
+  background-position: -250px -331px;
+}
+.sprite-java {
+  background-position: -330px -331px;
+}
+.sprite-jquery {
+  background-position: -410px -331px;
+}
+.sprite-js {
+  background-position: -10px -411px;
+}
+.sprite-libav {
+  background-position: -90px -411px;
+}
+.sprite-linux {
+  background-position: -170px -411px;
+}
+.sprite-mysql {
+  background-position: -250px -411px;
+}
+.sprite-nginx {
+  background-position: -330px -411px;
+}
+.sprite-nodejs {
+  background-position: -410px -411px;
+}
+.sprite-obj-c2 {
+  background-position: -490px -10px;
+}
+.sprite-opengl-icon {
+  background-position: -490px -90px;
+}
+.sprite-php {
+  background-position: -490px -170px;
+}
+.sprite-python {
+  background-position: -490px -250px;
+}
+.sprite-ubuntu {
+  background-position: -490px -330px;
+}
+.sprite-visstudio {
+  background-position: -490px -410px;
+}
+.sprite-wowzalogo {
+  background-position: -490px -490px;
+}
+.sprite-yii {
+  background-position: -570px -10px;
+}
+.sprite-par {
+  background-image: url('../img/partners.png');
+  background-repeat: no-repeat;
+  display: block;
+  margin: 0 auto;
+  width: 200px;
+  height: 60px;
+}
+.sprite-adv {
+  background-position: -5px -5px;
+}
+.sprite-digitalwill {
+  background-position: -215px -5px;
+}
+.sprite-expert {
+  background-position: -5px -75px;
+}
+.sprite-jet {
+  background-position: -215px -75px;
+}
+.sprite-myworldstudio {
+  width: 200px;
+  height: 60px;
+  background-position: -5px -145px;
+}
+.sprite-onix {
+  background-position: -215px -145px;
+}
+.sprite-printIm {
+  background-position: -5px -215px;
+}
+.sprite-seo {
+  background-position: -215px -215px;
+}
+.sprite-sht {
+  background-position: -5px -285px;
+}
+.sprite-shtorm {
+  background-position: -215px -285px;
+}
+.sprite-star {
+  background-position: -5px -355px;
+}
+.sprite-wacom {
+  background-position: -215px -355px;
+}
+.sprite-wargaming {
+  background-position: -425px -5px;
+}
+.sprite-wowza {
+  background-position: -425px -75px;
+}

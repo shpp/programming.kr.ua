@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ru" ng-app="app">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Школа программирования</title>
+  <link rel="shortcut icon" href="img/favicon.png" type="image/png">
+  <style>
+    body {
+      margin: 0;
+    }
+    #map {
+      height: 1080px;
+      width: 100%;
+    }
+    @media (max-width: 1680px) {
+      #map {
+        height: 1050px;
+      }
+    }
+    @media (max-width: 1366px) {
+      #map {
+        height: 768px;
+      }
+    }
+    @media (max-width: 800px) {
+      #map {
+        height: 600px;
+      }
+    }
+  </style>
+  <script src='https://api.tiles.mapbox.com/mapbox.js/v1.6.4/mapbox.js'></script>
+  <link href='https://api.tiles.mapbox.com/mapbox.js/v1.6.4/mapbox.css' rel='stylesheet' />
+</head>
+<body>
+  <div id='map'></div>
+  <script src="js/jquery.min.js"></script>
+  <script>
+    $(document).ready(function(){
+      var map = L.mapbox.map('map', 'nastyas.iid8p594');
+      map.setView([48.5072, 32.271], 18);
+      map.scrollWheelZoom.disable();
+      var marker = L.mapbox.featureLayer({
+          type: 'Feature',
+          geometry: {
+            type: 'Point',
+            coordinates: [32.27075636386871,48.50712652745812]
+          },
+          properties: {
+            title: 'ул. Тимирязева, 81',
+            'marker-color': '#2ecc71',
+            "marker-size":"large",
+            "marker-symbol":"college"
+          }
+      }).addTo(map);
+      marker.eachLayer(function(m) {
+        m.openPopup();
+      });
+    });
+  </script>
+</body>
+</html>

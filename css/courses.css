@@ -1,0 +1,393 @@
+.courses-common {
+  background-color: white;
+  text-align: center;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  position: relative;
+}
+.courses-common:after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 0;
+  border-left: 40px solid transparent;
+  border-right: 40px solid transparent;
+  border-top: 30px solid white;
+  border-bottom-color: white;
+  position: absolute;
+  bottom: -25px;
+  left: 47%;
+  margin-top: 11px;
+}
+.courses-common p {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  text-align: justify;
+  text-indent: 40px;
+  color: #2c3e50;
+}
+#webdev {
+  padding-top: 50px;
+}
+#webdev h2, #other-courses h2, #kids h2, #android h2, #common h2 {
+  text-align: center;
+  font-size: 2em;
+}
+#webdev p {
+  text-align: justify;
+  text-indent: 40px;
+  color: #333333;
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+#webdev p:first-of-type {
+  text-align: center;
+}
+#webdev p:last-of-type {
+  text-align: center;
+}
+#webdev .course-logos {
+  width: 100%;
+  text-align: center;
+  overflow: auto;
+}
+#webdev .course-logos .web-logo {
+  width: 7.14%;
+  float: left;
+  position: relative;
+  text-align: center;
+  font-size: 95%;
+  display: block;
+}
+@media (max-width: 1366px) {
+  #webdev .course-logos .web-logo {
+    margin-left: 3.5%;
+    margin-right: 3.5%;
+    margin-bottom: 25px;
+  }
+  #webdev .course-logos .web-logo:nth-child(8) {
+    clear: left;
+  }
+}
+#android {
+  padding-top: 50px;
+  text-align: center;
+  overflow: auto;
+}
+@media (max-width: 1024px) {
+  #android {
+    padding-top: 25px;
+  }
+}
+#android p {
+  margin-top: 25px;
+  margin-bottom: 25px;
+  color: #333333;
+}
+#android .course-part {
+  background-color: #27ae60;
+  width: 50%;
+  float: left;
+  min-height: 320px;
+  text-align: left;
+}
+@media (max-width: 980px) {
+  #android .course-part {
+    min-height: 380px;
+  }
+}
+@media (max-width: 800px) {
+  #android .course-part {
+    min-height: 400px;
+  }
+}
+#android .course-part h3,
+#android .course-part p {
+  margin: 20px;
+  color: white;
+}
+#android .course-part h3 {
+  font-size: 195%;
+  text-align: center;
+}
+@media (max-width: 980px) {
+  #android .course-part h3 {
+    font-size: 175%;
+  }
+}
+#android .course-part p {
+  text-align: justify;
+  text-indent: 40px;
+}
+#android .course-part:last-child {
+  background-color: #3d3d3d;
+}
+#other-courses {
+  padding-top: 50px;
+  padding-bottom: 30px;
+}
+#other-courses p {
+  color: #333333;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  text-indent: 40px;
+  text-align: justify;
+}
+#other-courses p:first-of-type {
+  text-align: center;
+  text-indent: 0px;
+}
+#other-courses .oth-course-logos {
+  width: 1000px;
+  margin: 0 auto;
+  margin-bottom: 15px;
+}
+@media (max-width: 1100px) {
+  #other-courses .oth-course-logos {
+    width: 900px;
+  }
+}
+@media (max-width: 980px) {
+  #other-courses .oth-course-logos {
+    width: 850px;
+  }
+}
+@media (max-width: 910px) {
+  #other-courses .oth-course-logos {
+    width: 800px;
+  }
+}
+@media (max-width: 840px) {
+  #other-courses .oth-course-logos {
+    width: 100%;
+  }
+}
+#other-courses .oth-course-logos .oth-course-logo {
+  display: inline-block;
+  width: 60px;
+  text-align: center;
+  margin-left: 18px;
+  margin-right: 18px;
+  position: relative;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+@media (max-width: 1100px) {
+  #other-courses .oth-course-logos .oth-course-logo {
+    margin-left: 13px;
+    margin-right: 13px;
+  }
+}
+@media (max-width: 980px) {
+  #other-courses .oth-course-logos .oth-course-logo {
+    margin-left: 21px;
+    margin-right: 21px;
+  }
+}
+@media (max-width: 910px) {
+  #other-courses .oth-course-logos .oth-course-logo {
+    margin-left: 35px;
+    margin-right: 35px;
+  }
+}
+@media (max-width: 840px) {
+  #other-courses .oth-course-logos .oth-course-logo {
+    margin-left: 4%;
+    margin-right: 4%;
+  }
+}
+@media (max-width: 790px) {
+  #other-courses .oth-course-logos .oth-course-logo {
+    margin-left: 3.9%;
+    margin-right: 3.9%;
+  }
+}
+#other-courses .oth-course-logos .oth-course-logo span {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -65px;
+  width: 130px;
+  font-size: 95%;
+  opacity: 0;
+  color: #27ae60;
+  -webkit-transition-property: opacity;
+  -o-transition-property: opacity;
+  -moz-transition-property: opacity;
+  -ms-transition-property: opacity;
+  transition-property: opacity;
+  -webkit-transition-duration: 0.5s;
+  -o-transition-duration: 0.5s;
+  -moz-transition-duration: 0.5s;
+  -ms-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+  z-index: 999;
+}
+#other-courses .oth-course-logos .oth-course-logo:hover span {
+  opacity: 1;
+}
+#kids {
+  background-color: white;
+  text-align: center;
+  padding: 30px;
+  padding-left: 120px;
+  padding-right: 120px;
+  position: relative;
+}
+@media (max-width: 980px) {
+  #kids {
+    padding: 25px;
+  }
+}
+#kids p {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  color: #2c3e50;
+  text-align: justify;
+  text-indent: 40px;
+}
+#kids:before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  top: -20px;
+  left: 0;
+  height: 30px;
+  background: linear-gradient(-135deg, transparent 75%, #ffffff 75%) 0 50%, linear-gradient(135deg, transparent 75%, #ffffff 75%) 0 50%;
+  background-repeat: repeat-x;
+  background-size: 10px 10px, 10px 10px;
+}
+#kids:after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  bottom: -20px;
+  left: 0;
+  height: 30px;
+  background: linear-gradient(-45deg, transparent 75%, #ffffff 75%) 0 50%, linear-gradient(45deg, transparent 75%, #ffffff 75%) 0 50%;
+  background-repeat: repeat-x;
+  background-size: 10px 10px, 10px 10px;
+}
+#kids .leftK,
+#kids .rightK {
+  position: absolute;
+  top: 50%;
+  margin-top: -76px;
+  width: 73px;
+  height: 152px;
+  background-image: url('../img/forkids.png');
+  background-repeat: no-repeat;
+}
+@media (max-width: 980px) {
+  #kids .leftK,
+  #kids .rightK {
+    top: 18px;
+    width: 35px;
+    height: 70px;
+    margin-top: 0;
+    background-size: 175%;
+  }
+}
+#kids .leftK {
+  left: 25px;
+  background-position: 0 -10px;
+}
+@media (max-width: 980px) {
+  #kids .leftK {
+    left: 270px;
+    background-position: 0 0px;
+  }
+}
+@media (max-width: 900px) {
+  #kids .leftK {
+    left: 230px;
+  }
+}
+@media (max-width: 900px) {
+  #kids .leftK {
+    left: 200px;
+  }
+}
+#kids .rightK {
+  right: 25px;
+  background-position: -100px -10px;
+}
+@media (max-width: 980px) {
+  #kids .rightK {
+    right: 270px;
+    background-position: -40px 0px;
+  }
+}
+@media (max-width: 900px) {
+  #kids .rightK {
+    right: 230px;
+  }
+}
+@media (max-width: 900px) {
+  #kids .rightK {
+    right: 200px;
+  }
+}
+#anketa {
+  text-align: center;
+  padding-top: 30px;
+}
+#anketa form h2 {
+  margin-bottom: 30px;
+  font-size: 250%;
+  font-size: 2em;
+}
+#anketa form input, #anketa form textarea{
+  border: 2px solid rgba(0, 0, 0, 0.08);
+  font-size: 110%;
+  color: #2c3e50;
+  padding: 1px;
+  width: 300px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+#anketa form textarea{
+  height: 100px;
+  resize: none;
+  font-family: "Open Sans", sans-serif;
+}
+#anketa form input{
+  height: 30px;
+  margin-bottom: 20px;
+}
+#anketa form label {
+  width: 160px;
+  display: inline-block;
+  text-align: left;
+  margin-right: 30px;
+  color: #333333;
+}
+#anketa form label[for=letter] {
+  vertical-align: top;
+}
+#anketa form label span.important {
+  color: #e74c3c;
+}
+#anketa form input[type=submit] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none; 
+  height: 50px;
+  font-size: 24px;
+  margin: 0 auto;
+  background-color: #27ae60;
+  cursor: pointer;
+  margin-bottom: 60px;
+  border: 0;
+  color: white;
+  margin-top: 50px;
+}
+#anketa form input[type=submit]:hover {
+  background-color: #2cc36b;
+}
+.notice{
+  font-size: 220%;
+  margin-top: 20px;
+  margin-bottom: 50px;
+  display: none;
+}

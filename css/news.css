@@ -1,0 +1,209 @@
+.news-container {
+  color: #2c3e50;
+  margin-top: 25px;
+}
+.news-container .news-row {
+  overflow: auto;
+  background-color: white;
+  margin-bottom: 25px;
+  position: relative;
+}
+.news-container .news-row .news-content,
+.news-container .news-row .news-slider {
+  float: left;
+  width: 50%;
+}
+.news-container .news-row .news-content {
+  position: relative;
+  padding-bottom: 20px;
+}
+.news-container .news-row .news-content h2 {
+  color: #27ae60;
+  font-size: 170%;
+  width: 90%;
+  margin: 0 auto;
+  margin-top: 15px;
+  margin-bottom: 12px;
+}
+.news-container .news-row .news-content a {
+  border-bottom: 1px dashed #2c3e50;
+}
+.news-container .news-row .news-content p {
+  margin-bottom: 10px;
+}
+@media (max-width: 1200px) {
+  .news-container .news-row .news-content h2 {
+    font-size: 150%;
+  }
+}
+@media (max-width: 1090px) {
+  .news-container .news-row .news-content h2 {
+    font-size: 130%;
+    margin-bottom: 5px;
+  }
+}
+@media (max-width: 900px) {
+  .news-container .news-row .news-content h2 {
+    font-size: 120%;
+  }
+}
+@media (max-width: 800px) {
+  .news-container .news-row .news-content h2 {
+    font-size: 116%;
+  }
+}
+.news-container .news-row .news-content h2 span {
+  position: absolute;
+  font-size: 56%;
+  float: right;
+  color: #2c3e50;
+  right: 5%;
+  top: 28px;
+}
+@media (max-width: 1200px) {
+  .news-container .news-row .news-content h2 span {
+    top: 26px;
+  }
+}
+@media (max-width: 900px) {
+  .news-container .news-row .news-content h2 span {
+    top: 25px;
+  }
+}
+.news-container .news-row .news-content hr {
+  border-bottom: 4px solid #fff;
+  border-color: #2c3e50;
+  width: 32px;
+  border-top: 0;
+  margin-top: 10px;
+  margin-bottom: 15px;
+  margin-left: 5%;
+}
+.news-container .news-row .news-content .content {
+  width: 90%;
+  margin: 0 auto;
+  text-align: justify;
+  white-space: pre-line;
+  word-break: break-word;
+  line-height: 1.7;
+}
+@media (max-width: 1090px) {
+  .news-container .news-row .news-content .content {
+    font-size: 95%;
+  }
+}
+.news-container .news-row .news-slider img {
+  width: 100%;
+  display: block;
+  height: auto;
+}
+.news-container .news-row .news-slider .owl-pagination,#newweb .news-slider .owl-nav{
+  display: none;
+}
+.news-more{
+  position: absolute;
+  left: 2%;
+  bottom: 5%;
+  cursor: pointer;
+  display: none;
+}
+.news-close{
+  position: absolute;
+  left: 4.4%;
+  bottom: 15px;
+  cursor: pointer;
+  display: none;
+}
+.news-more span,.news-close span{
+  line-height: 50px;
+  color: #27ae60;
+  font-family: "AleksandraC",sans-serif;
+  font-size: 22px;
+}
+.more-icon,.more-icon-close{
+  display: block;
+  float: left;
+  overflow: hidden;
+  width: 50px;
+  height: 50px;
+  background-image: url("../img/icon_sprite.svg");
+  background-repeat: no-repeat;
+  background-position: -268px 0px;
+  background-size: 639%;
+  transform: rotate(-90deg);
+  -webkit-transform: rotate(-90deg);
+  -o-transform: rotate(-90deg);
+  -moz-transform: rotate(-90deg); 
+  -ms-transform: rotate(-90deg);   
+}
+.more-icon-close{
+  transform: rotate(-180deg);
+  -webkit-transform: rotate(-180deg);
+  -o-transform: rotate(-180deg);
+  -moz-transform: rotate(-180deg); 
+  -ms-transform: rotate(-180deg);  
+}
+
+@media (min-width: 1700px) {
+  .hidden-news{
+    display: block;
+  }
+  .news-more,.news-close{
+    display: none;
+  }
+}
+.news-video {
+  position: relative;
+  padding-bottom: 31.25%; /* 16:9 */
+  height: 0;
+}
+.news-video iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.news-video p {
+  position: absolute;
+  top: 100%;
+  margin-top: 25px;
+}
+@media (max-width: 1090px) {
+  .news-more span,.news-close span{
+    line-height: 36px;
+    font-size: 18px;
+  }
+  .more-icon,.more-icon-close{
+    width: 35px;
+    height: 35px;
+    background-position: -203px -2px;
+    background-size: initial;
+  }
+  #ice .news-content, #ice .news-slider{
+    float: none;
+    width: 100%;
+  }
+  .news-video {
+    padding-bottom: 56.25%; /* 16:9 */
+    width: 90% !important;
+    margin: 0 auto;
+    margin-bottom: 4.5%;
+  }
+  #ice .news-content h2 span{
+    top:10px;
+  }
+}
+
+.news-open{
+  padding-bottom:70px;
+}
+.news-open .news-more,.news-open .news-slider{
+  display: none !important;
+}
+.news-open .news-close,.news-open .hidden-news{
+  display: block !important;
+}
+.news-open .news-content{
+  width: 100% !important;
+}

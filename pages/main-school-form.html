@@ -1,0 +1,77 @@
+<div class="breadcrumbs small">
+  <a onclick="window.history.back();">
+    <i class="fa fa-long-arrow-left" id="back-button"></i>
+    На предыдущую страницу
+  </a>
+</div>
+<div class="main-school-form form">
+  <h2>Собственно, анкета</h2>
+  <form 
+    method="POST" 
+    action="" 
+    name="schoolForm" 
+    data-ng-submit="submitForm(schoolForm.$valid)" 
+    novalidate>
+    <label for="address">
+      Адрес (не обязательно точный)<span class="important">*</span>
+    </label>
+    <input 
+      type="text" 
+      name="address" 
+      id="address" 
+      placeholder="г. Кировоград, ул. Тимирязева, 81" 
+      data-ng-model="student.address" 
+      data-ng-pattern="addressPattern" 
+      data-ng-class="{ 'has-error' : schoolForm.address.$invalid && submitted }"
+      required>
+    <label for="phone">
+      Моб. телефон<span class="important">*</span>
+    </label>
+    <input 
+      type="tel" 
+      name="phone" 
+      id="phone" 
+      placeholder="066 00 00 000" 
+      data-ng-model="student.phone" 
+      data-ng-pattern="phonePattern" 
+      data-ng-class="{ 'has-error' : schoolForm.phone.$invalid && submitted }" 
+      required>
+    <label for="parphone">
+      Моб. телефон родителя(опекуна)<span class="important">*</span>
+    </label>
+    <input 
+      type="tel" 
+      name="parphone" 
+      id="parphone" 
+      placeholder="099 00 00 000" 
+      data-ng-model="student.parphone" 
+      data-ng-pattern="phonePattern" 
+      data-ng-class="{ 'has-error' : schoolForm.parphone.$invalid && submitted }" 
+      required> 
+    <label for="gmail">
+      Электронная почта<span class="important">*</span>
+    </label>
+    <input 
+      type="email" 
+      name="gmail" 
+      id="gmail" 
+      placeholder="info@gmail.com" 
+      data-ng-model="student.gmail" 
+      data-ng-pattern="emailPattern" 
+      data-ng-class="{ 'has-error' : schoolForm.gmail.$invalid && submitted }" 
+      required>
+    <label for="education">
+      Учебное заведение<span class="important">*</span>
+    </label>
+    <input 
+      type="text" 
+      name="education" 
+      id="education" 
+      placeholder="ООШ №11" 
+      data-ng-model="student.education" 
+      data-ng-pattern="addressPattern"
+      data-ng-class="{ 'has-error' : schoolForm.education.$invalid && submitted }" 
+      required>
+    <input type="submit" value="Верю, эти данные вам нужны!" data-ng-click="submitted=true">
+  </form>
+</div>

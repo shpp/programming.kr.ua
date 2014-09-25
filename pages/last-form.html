@@ -1,0 +1,74 @@
+<div class="breadcrumbs">
+  <a onclick="window.history.back();">
+    <i class="fa fa-long-arrow-left" id="back-button"></i>
+    На предыдущую страницу
+  </a>
+</div>
+<div class="last-form form">
+  <h2>Ну в принципе всё...</h2>
+  <p>
+    Ура! Вы дошли до конца.
+  </p>
+  <p>
+    Теперь - "как только так сразу". В общем мы вам напишем, или перезвоним.
+  </p>
+  <p>
+    Так же не стесняйтесь пинать нас, <a href="./about#contacts" target="_blank">наши контакты</a> есть на сайте.
+  </p>
+  <p>
+    На самом деле мы бы хотели, чтобы вы еще фотку свою загрузили, но это наглость высшей степени, поэтому можете просто закрыть ваш браузер, нам хватило информации от вас.
+  </p>
+  <p>
+    Ваша фотка нужна будет в любом случае в начале обучения, когда мы будем формировать "анкету группы" для преподавателей.
+  </p>
+  <div class="thnx zone">
+    <p>
+      Спасибо за фотографию!&nbsp;:)
+    </p>
+  </div>
+  <div data-nv-file-drop="" data-uploader="uploader" class="addImg">
+    <div data-ng-show="uploader.isHTML5">
+      <div class="over-zone zone" data-nv-file-over="" data-uploader="uploader">
+        <p>
+          Мы будем рады если вы зальёте фотку! Mожете перетянуть её прямо сюда из папки...
+        </p>
+      </div>
+    </div>
+    <div class="upload-container">
+      <input id="fileinp" type="file" data-nv-file-select="" data-uploader="uploader" />
+      <ul>
+        <li data-ng-repeat="item in uploader.queue">
+          <div data-ng-if="controller.isImage(item._file)">
+            <div data-ng-thumb="{ file: item._file, height: 100 }" style="overflow:hidden"></div>
+          </div>
+          <div>{{ item.file.name }}</div>
+          <div class="load-but" style="margin-top: 20px;">
+            <button data-ng-click="item.upload();" data-ng-disabled="item.isReady || item.isUploading || item.isSuccess" >
+              <i class="fa fa-upload"></i>&nbsp;Загрузка
+            </button>
+            <button data-ng-click="item.remove()" id="cancelImg">
+              <i class="fa fa-trash-o"></i>&nbsp;Удалить
+            </button>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="load-but" data-ng-hide="uploader.queue.length > 0">
+    <button id="chooseFile" data-ng-click="streaming = false">...или выбрать файл</button>
+    <button id="callWebCam" data-ng-click="streaming = true" data-ng-hide="streaming">...или сделать снимок вебкамерой</button>
+  </div>
+  <div class="webCamDiv">
+    <div style="display: inline-block;">
+      <video id="webcam" width="337" autoplay></video>
+    </div>
+    <div style="display: inline-block;" data-ng-show="readyTosave" class="canvas-relative">
+      <canvas id="screenshot-canvas"></canvas>
+      <button id="screenshot-save" data-ng-show="readyTosave">Сохранить</button>
+    </div>
+    <div class="load-but">
+      <button id="screenshot-button" data-ng-click="readyTosave = true" data-ng-hide="readyTosave">Сделать снимок</button>
+      <button id="screenshot-repeat" data-ng-show="readyTosave">Еще раз</button>  
+    </div>
+  </div>
+</div>

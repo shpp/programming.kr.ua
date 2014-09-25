@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="ru" data-ng-app="app">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width">
+  <meta name="Description" content="Кировоградская школа программирования Ш++">
+  <meta name="Keywords" content="Кировоград, школа, программирования, Ш++, курсы, Веб разработка, Web development, Андроид разработка, Android development, Mobile development, робототехника, Весна Софт, VesnaSoft">
+  <title>Школа программирования</title>
+  <link rel="shortcut icon" href="img/favicon.png" type="image/png">
+  <link rel="stylesheet" href="css/owl.carousel.css">
+  <link rel="stylesheet" href="css/template.css" />
+  <link rel="stylesheet" href="css/home.css" />
+  <link rel="stylesheet" href="css/potential.css" />
+  <link rel="stylesheet" href="css/news.css" />
+  <link rel="stylesheet" href="css/courses.css" />
+  <link rel="stylesheet" href="css/about.css" />
+  <link rel="stylesheet" href="css/sprites.css">
+  <link rel="stylesheet" href="css/font-awesome.min.css">
+  <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+  <!--[if lt IE 9]>
+    <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+  <![endif]-->
+</head>
+<body data-ng-controller="mainController" data-scroll>
+  <header data-ng-class="{ nogrborder: isActive('/potential') || isActive('/courses') || isActive('/about') }">
+    <div class="container">
+      <div class="logo">
+        <a href="./">
+          <span class="sh">Ш</span>
+          <span class="plus">++</span>
+        </a>
+      </div>
+      <div class="main-menu">
+        <nav>
+          <a href="./" data-ng-class="{active: isActive('/')}">Главная</a>
+          <a href="news" data-ng-class="{active: isActive('/news')}">Новости</a>
+          <a href="courses" data-ng-class="{active: isActive('/courses')}">Курсы</a>
+          <a href="potential" data-ng-class="{active: isActive('/potential')}">Возможности</a>
+          <a href="about" data-ng-class="{active: isActive('/about')}">О нас</a>
+          <a href="http://vk.com/programming_in_kr" target="_blank" style="color: rgb(41, 128, 185);">ВКонтакте</a>
+          <a href="courses#anketa" class="anketa" style="color: #27ae60;">Заполните анкету!</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+  <div data-ng-view class="views" data-autoscroll></div>
+  <footer>
+    <div class="container">
+      <div class="mailUs">
+        <div class="mail-text">
+          <button data-ng-click="sendMail()" id="questBut">
+            Задай вопрос
+          </button>
+          <br>
+          <textarea name="letter" id="waitforletters" placeholder="Ждем Ваши письма!"></textarea>
+          <p>
+            *Не забудьте указать свои контакты!
+          </p>
+        </div>
+      </div>
+      <div class="footer-menu">
+        <ul>
+          <li>
+            <a href="courses">Курсы</a>
+            <ul class="submenu-list">
+              <li>
+                <a href="courses#webdev">Web Development</a>
+              </li>
+              <li>
+                <a href="courses#android">Mobile Development</a>
+              </li>
+              <li>
+                <a href="courses#other-courses">Другие&nbsp;направления</a>
+              </li>
+              <li>
+                <a href="courses#kids">Для школьников</a>
+              </li>
+              <li>
+                <a href="courses#anketa">Анкета</a>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a href="potential">Возможности</a>
+            <ul class="submenu-list">
+              <li>
+                <a href="potential#hardware">Тех. обеспечение</a>
+              </li>
+              <li>
+                <a href="potential#software">ПO</a>
+              </li>
+              <li>
+                <a href="potential#library">Наша библиотека</a>
+              </li>
+              <li>
+                <a href="potential#teachers">Учителя</a>
+              </li>
+              <li>
+                <a href="potential#plans">Наши планы</a>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a href="about">Про нас</a>
+            <ul class="submenu-list">
+              <li>
+                <a href="about#achievement">Наши достижения</a>
+              </li>
+              <li>
+                <a href="about#philosophy">Философия школы</a>
+              </li>
+              <li>
+                <a href="about#partners">Наши партнёры</a>
+              </li>
+              <li>
+                <a href="about#contacts">Контакты</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+      <div class="footer-menu footer-sm-menu">
+        <ul>
+          <li>
+            <a href="./">Главная</a>
+          </li>
+          <li>
+            <a href="news">Новости</a>
+          </li>
+          <li>
+            <a href="http://vk.com/programming_in_kr" target="_blank">ВКонтакте</a>
+          </li> 
+        </ul>
+      </div>
+    </div>
+  </footer>
+  <div id="scrollup" data-ng-click="toTheTop()"></div>
+  <script>
+    document.write('<base href="' + document.location + '" />');
+  </script>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+  <script>
+    window.jQuery || document.write('<script src="js/jquery.min.js">\x3C/script>');
+  </script>
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.17/angular.min.js"></script>
+  <script>
+    window.angular || document.write('<script src="js/angular.min.js">\x3C/script>');
+  </script>
+  <script src="http://code.angularjs.org/1.2.7/angular-route.min.js"></script>
+  <script>
+    (function() { 
+      try {
+        window.angular.module('ngRoute');
+      }
+      catch(e) {
+        return false;
+      }
+      return true;
+    })() || document.write('<script src="js/angular-route.js">\x3C/script>');
+  </script>
+  <script src='http://cdnjs.cloudflare.com/ajax/libs/fastclick/1.0.2/fastclick.min.js'></script>
+  <script>
+    window.FastClick || document.write('<script src="js/fastclick.min.js">\x3C/script>');
+  </script>
+  <script src="js/angular-scroll.min.js"></script>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.20/angular-sanitize.min.js"></script>
+  <script>
+    (function() { 
+      try {
+        window.angular.module('ngSanitize');
+      }
+      catch(e) {
+        return false;
+      }
+      return true;
+    })() || document.write('<script src="js/sanitize.js">\x3C/script>');
+  </script>
+  <script src="js/angular-file-upload.min.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/controllers.js"></script>
+  <script src="js/owl.min.js"></script>
+
+  <!-- Yandex.Metrika informer -->
+  <a href="https://metrika.yandex.ru/stat/?id=25885139&amp;from=informer"
+  target="_blank" rel="nofollow" style="display:none;">
+    <img src="//bs.yandex.ru/informer/25885139/3_1_FFFFFFFF_EFEFEFFF_0_pageviews"
+    style="width:88px; height:31px; border:0;" alt="Яндекс.Метрика" title="Яндекс.Метрика: данные за сегодня (просмотры, визиты и уникальные посетители)" onclick="try{Ya.Metrika.informer({i:this,id:25885139,lang:'ru'});return false}catch(e){}"/>
+  </a>
+  <!-- /Yandex.Metrika informer -->
+
+  <!-- Yandex.Metrika counter -->
+  <script type="text/javascript">
+  (function (d, w, c) {
+    (w[c] = w[c] || []).push(function() {
+      try {
+        w.yaCounter25885139 = new Ya.Metrika({
+          id:25885139,
+          clickmap:true,
+          trackLinks:true,
+          accurateTrackBounce:true
+        });
+      } catch(e) { }
+    });
+
+    var n = d.getElementsByTagName("script")[0];
+    var s = d.createElement("script");
+    var f = function () { n.parentNode.insertBefore(s, n); };
+    s.type = "text/javascript";
+    s.async = true;
+    s.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//mc.yandex.ru/metrika/watch.js";
+
+    if (w.opera == "[object Opera]") {
+      d.addEventListener("DOMContentLoaded", f, false);
+    } else { f(); }
+  })(document, window, "yandex_metrika_callbacks");
+  </script>
+  <noscript>
+    <div>
+      <img src="//mc.yandex.ru/watch/25885139" style="position:absolute; left:-9999px;display:none;" alt="" />
+    </div>
+  </noscript>
+  <!-- /Yandex.Metrika counter -->
+
+  <!-- Google Analytics -->
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-53861593-1', 'auto');
+    ga('send', 'pageview');
+  </script>
+  <!-- /Google Analytics -->
+</body>
+</html>

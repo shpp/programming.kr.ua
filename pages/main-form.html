@@ -1,0 +1,214 @@
+<div class="breadcrumbs">
+  <a onclick="window.history.back();">
+    <i class="fa fa-long-arrow-left" id="back-button"></i>
+    На предыдущую страницу
+  </a>
+</div>
+<div class="main-form form">
+  <h2>Собственно, анкета</h2>
+  <form 
+    method="POST" 
+    action="" 
+    name="mainForm"
+    id="mainForm"
+    data-ng-submit="submitForm(mainForm.$valid)"
+    novalidate>
+    <label for="address">
+      Я хочу изучать<span class="important">*</span>
+    </label>
+    <input 
+      type="text" 
+      name="course" 
+      id="course" 
+      placeholder="web development" 
+      data-ng-model="student.course" 
+      data-ng-pattern="regComment" 
+      data-ng-class="{ 'has-error' : mainForm.course.$invalid && submitted }"
+      required>
+    <label for="address">
+      Адрес (не обязательно точный)<span class="important">*</span>
+    </label>
+    <input 
+      type="text" 
+      name="address" 
+      id="address" 
+      placeholder="г. Кировоград, ул. Тимирязева, 81"
+      data-ng-model="student.address" 
+      data-ng-pattern="addressPattern" 
+      data-ng-class="{ 'has-error' : mainForm.address.$invalid && submitted }"
+      required>
+    <div class="info-input">
+      <label for="phone">
+        Моб. телефон<span class="important">*</span>
+      </label>
+      <input 
+        type="tel" 
+        name="phone" 
+        id="phone" 
+        placeholder="066 00 00 000"
+        data-ng-model="student.phone" 
+        data-ng-pattern="phonePattern" 
+        data-ng-class="{ 'has-error' : mainForm.phone.$invalid && submitted }" 
+        required>
+      <a>
+        У меня 2+ карточки, какую указать?
+        <span>Обе</span>
+      </a>  
+    </div>
+    <div class="info-input">
+      <label for="skype">
+        Skype<span class="important">*</span>
+      </label>
+      <input 
+        type="text" 
+        name="skype" 
+        id="skype" 
+        placeholder="ivanov91"
+        data-ng-model="student.skype" 
+        data-ng-pattern="skypePattern" 
+        data-ng-class="{ 'has-error' : mainForm.skype.$invalid && submitted }" 
+        required>
+      <a>
+        Я не пользуюсь скайпом
+        <span>Обучение&nbsp;дороже&nbsp;на&nbsp;$1000</span>
+      </a>
+    </div>
+    <div class="info-input">
+      <label for="gmail">
+        Почта gmail<span class="important">*</span>
+      </label>
+      <input 
+        type="email" 
+        name="gmail" 
+        id="gmail" 
+        placeholder="info@gmail.com"
+        data-ng-model="student.gmail" 
+        data-ng-pattern="gmailPattern" 
+        data-ng-class="{ 'has-error' : mainForm.gmail.$invalid && submitted }" 
+        required>
+      <a>
+        Я не пользуюсь gmail
+        <span>Обучение&nbsp;дороже&nbsp;на&nbsp;$1000</span>
+      </a>
+    </div>
+    <div class="check" data-ng-class="{ 'has-error' : (student.skypeCheck == '' || student.gmailCheck == '') && submitted }">
+      <label for="skypecheck" class="inline-label">
+        <input 
+          type="checkbox" 
+          id="skypecheck"
+          name="skypeCheck"
+          data-ng-model="student.skypeCheck"
+          value="Да"
+          required>
+        Я захожу в скайп хотя бы раз в день
+      </label>
+      <label for="mailcheck"  class="inline-label">
+        <input 
+          type="checkbox" 
+          id="mailcheck"
+          name="gmailCheck"
+          data-ng-model="student.gmailCheck"
+          value="Да"
+          required>
+        Я проверяю почту хотя бы раз в день
+      </label>
+    </div>
+    <label for="education">
+      Образование, год выпуска (Позволит нам лучше понять ваш уровень)<span class="important">*</span>
+    </label>
+    <input 
+      type="text" 
+      name="education" 
+      id="education" 
+      placeholder="Высшее техническое, 2013г."
+      data-ng-model="student.education" 
+      data-ng-pattern="addressPattern"
+      data-ng-class="{ 'has-error' : mainForm.education.$invalid && submitted }" 
+      required>
+    <div class="check" data-ng-class="{ 'has-error' : mainForm.english.$invalid && submitted }">
+      <label class="inline-label">
+        <input 
+          type="radio" 
+          name="english" 
+          value="С английским всё плохо"
+          data-ng-model="student.english" 
+          data-ng-required="!student.english">
+        С английским всё плохо
+      </label>
+      <label  class="inline-label">
+        <input 
+          type="radio" 
+          name="english" 
+          value="My name is Вова"
+          data-ng-model="student.english" 
+          data-ng-required="!student.english">
+        My name is Вова
+      </label>
+      <label class="inline-label">
+        <input 
+          type="radio" 
+          name="english" 
+          value="Reading skills are good"
+          data-ng-model="student.english" 
+          data-ng-required="!student.english">
+        Reading skills are good
+      </label>
+      <label  class="inline-label">
+        <input 
+          type="radio" 
+          name="english" 
+          value="English? No problem!"
+          data-ng-model="student.english" 
+          data-ng-required="!student.english">
+        English? No problem!
+      </label>
+    </div>
+    <label for="skills">
+      Уровень знаний в интересуемом направлении<span class="important">*</span>
+    </label>
+    <input 
+      type="text" 
+      name="skills" 
+      id="skills" 
+      placeholder="html учил в студенческие годы..."
+      data-ng-model="student.skills" 
+      data-ng-pattern="regComment"
+      data-ng-class="{ 'has-error' : mainForm.skills.$invalid && submitted }" 
+      required>
+    <div class="check" data-ng-class="{ 'has-error' : mainForm.dest.$invalid && submitted }">
+      <label class="inline-label">
+        <input type="radio" name="dest" value="Хочу научиться хотя бы азам, для себя, я не гений" disabled>
+        Хочу научиться хотя бы азам, для себя, я не гений
+      </label>
+      <label  class="inline-label">
+        <input 
+          type="radio" 
+          name="dest"
+          value="Буду стараться!"
+          data-ng-model="student.dest" 
+          data-ng-required="!student.dest">
+        Буду стараться!
+      </label>
+      <label  class="inline-label">
+        <input 
+          type="radio" 
+          name="dest"
+          data-ng-model="student.dest" 
+          data-ng-required="!student.dest"
+          value="Трудоустройство после обучения">
+        Трудоустройство после обучения
+      </label>
+      <label class="inline-label">
+        <input type="radio" name="dest" disabled value="Как получится...">
+        Как получится...
+      </label>
+      <div class="info-input">
+        <a>
+          Почему некоторые пункты нельзя выбрать?
+          <span>Мы&nbsp;за&nbsp;серьёзные&nbsp;цели</span>
+        </a>
+      </div>
+    </div>
+    <input type="submit" value="Верю, эти данные вам нужны!" data-ng-click="submitted=true">
+  </form>
+</div>

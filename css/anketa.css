@@ -1,0 +1,305 @@
+@import "http://webfonts.ru/import/aleksandrac.css";
+@import "http://webfonts.ru/import/osans.css";
+html,body{
+  height: 100%;
+}
+html {
+  -ms-touch-action: manipulation;
+  touch-action: manipulation;
+}
+body {
+  background-color: #ecf0f1;
+  font-family: 'Open Sans', sans-serif;
+  line-height: 1.5;
+  font-size: 100%;
+  min-width: 760px;
+}
+html,body,a,input,button,span,p,h1,h2,h3,h4,h5,h6,section,header,footer,div,textarea,ul,li {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  border: none;
+}
+a {
+  color: #2c3e50;
+  text-decoration: none;
+  cursor: pointer;
+}
+h1,h2,h3,h4,h5,h6 {
+  font-family: 'AleksandraC', sans-serif;
+  font-weight: normal;
+}
+h1,h2,h3 {
+  color: #27ae60;
+}
+.container {
+  width: 84%;
+  margin: 0 auto;
+}
+header {
+	width: 100%;
+	background-color: white;
+	height: 90px;
+	position: relative;
+	border-bottom: 5px solid rgb(39,174,96);
+}
+header .logo {
+	float: left;
+	overflow: hidden;
+}
+header .sh, header .plus {
+	font-family: arial;
+	font-size: 380%;
+	font-weight: bold;
+	line-height: 90px;
+}
+header .sh {
+	color: black;
+}
+header .plus{
+	color: #27ae60;
+}
+.name{
+	float: right;
+}
+.name h1{
+	line-height: 90px;
+}
+.form{
+	width: 740px;
+	margin: 0 auto;
+	margin-top: 50px;
+	background-color: white;
+	box-sizing: border-box;
+  	-moz-box-sizing: border-box;
+  	-webkit-box-sizing: border-box;
+  	padding: 20px 30px;
+}
+form {
+	padding-top: 20px;
+}
+form input[type=text], form input[type=tel],form input[type=email],form input[type=number]{
+	border: 2px solid rgba(0, 0, 0, 0.08);
+	font-size: 18px;
+	color: #2c3e50;
+	padding: 1px;
+	padding-left: 5px;
+	padding-right: 5px;
+	height: 30px;
+	width: 98%;
+	margin-bottom: 20px;
+	margin-top: 10px;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none; 
+}
+form label,form input[type=text],form input[type=tel],form input[type=email],form input[type=number]{
+	display: block;
+}
+form label {
+	text-align: left;
+	color: #2c3e50;
+}
+form label span.important {
+	color: #e74c3c;
+}
+form input[type=submit] {
+	height: 50px;
+	font-size: 22px;
+	margin: 0 auto;
+	background-color: #27ae60;
+	cursor: pointer;
+	border: 0;
+	color: white;
+	margin-top: 40px;
+	margin-bottom: 20px;
+	width: intrinsic;
+	padding-left: 20px;
+	padding-right: 20px;
+	display: block;
+}
+button{
+	background-color: #27ae60;
+	cursor: pointer;
+	border: 0;
+	color: white;
+	font-size: 17px;
+	padding: 7px 12px;
+}
+button:hover{
+	background-color: #2cc36b;
+}
+.check-school-form button{
+	margin-bottom: 10px;
+}
+form input[type=submit]:hover {
+ 	background-color: #2cc36b;
+}
+.check-school-form button:first-of-type{
+	margin-right: 8px;
+}
+p{
+	color: #2c3e50;
+}
+.check-school-form p{
+	color: #2c3e50;
+	margin-top: 10px;
+}
+.check-school-form p:last-of-type{
+	margin-bottom: 25px;
+}
+.choose-course p{
+	color: #2c3e50;
+	-moz-transition-property: all;
+	-ms-transition-property: all;
+	-webkit-transition-property: all;
+	-o-transition-property: all;
+	transition-property: all;
+	-moz-transition-duration: 0.2s;
+	-ms-transition-duration: 0.2s;
+	-webkit-transition-duration: 0.2s;
+	-o-transition-duration: 0.2s;
+	transition-duration: 0.2s;
+}
+.choose-course h2{
+	-moz-transition-property: all;
+	-ms-transition-property: all;
+	-webkit-transition-property: all;
+	-o-transition-property: all;
+	transition-property: all;
+	-moz-transition-duration: 0.2s;
+	-ms-transition-duration: 0.2s;
+	-webkit-transition-duration: 0.2s;
+	-o-transition-duration: 0.2s;
+	transition-duration: 0.2s;
+}
+.choose-course{
+	border: 2px dashed lavender;
+	margin-top: 15px;
+	margin-bottom: 25px;
+	padding: 20px;
+	text-align: center;
+	cursor: pointer;
+	background-color: white;
+	-moz-transition-property: all;
+	-ms-transition-property: all;
+	-webkit-transition-property: all;
+	-o-transition-property: all;
+	transition-property: all;
+	-moz-transition-duration: 0.2s;
+	-ms-transition-duration: 0.2s;
+	-webkit-transition-duration: 0.2s;
+	-o-transition-duration: 0.2s;
+	transition-duration: 0.2s;
+}
+.choose-course:hover{
+	border: 2px dashed  #27ae60;
+	background-color:  #27ae60;
+}
+.choose-course:hover p,.choose-course:hover h2{
+	color:  white;
+}
+.choose-course:last-child{
+	margin-bottom: 10px;
+}
+.info-input input[type=text],.info-input input[type=tel],.info-input input[type=email],.info-input input[type=number]{
+	width: 200px;
+	margin-right: 15px;
+	display: inline-block;
+}
+.main-form input[name=gmail]{
+	margin-bottom: 0 !important;
+}
+.info-input a{
+	color:  #27ae60;
+	border-bottom: 1px dashed #27ae60;
+	position: relative;
+	cursor: default;
+}
+.info-input a span{
+	position: absolute;
+	top: -3px;
+	left: 100%;
+	margin-left: 30px;
+	color: #2c3e50;
+	border-bottom: none;
+	background-color: #ecf0f1;
+	padding: 2px;
+	padding-right: 10px;
+	opacity: 0;
+	-moz-transition-property: opacity;
+	-ms-transition-property: opacity;
+	-webkit-transition-property: opacity;
+	-o-transition-property: opacity;
+	transition-property: opacity;
+	-moz-transition-duration: 0.2s;
+	-ms-transition-duration: 0.2s;
+	-webkit-transition-duration: 0.2s;
+	-o-transition-duration: 0.2s;
+	transition-duration: 0.2s;
+}
+.info-input a:hover span{
+	opacity: 1;
+}
+.info-input a span:before{
+	content: "";
+	position: absolute;
+	top: 0;
+	left: -14px;
+	display: block;
+	width: 0;
+	height: 0;
+	border-top: 14px solid transparent;
+	border-bottom: 14px solid transparent;
+	border-right: 14px solid #ecf0f1;
+	border-left-color: #ecf0f1;
+}
+.check{
+	margin-top: 30px;
+	margin-bottom: 20px;
+	border: 2px dashed lavender;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+.inline-label{
+	display: inline-block;
+	margin-left: 20px;
+	cursor: pointer;
+	line-height: 2;
+}
+.check .info-input{
+	margin-top: 10px;
+	margin-bottom: 15px;
+	padding-left: 20px;
+}
+.price-form,.main-school-form{
+	width: 445px;
+}
+.price-form form{
+	padding-top: 10px;
+	width: 340px;
+	margin: 0 auto;
+}
+.price-form label{
+	cursor: pointer;
+	line-height: 2;
+}
+.price-form h3{
+	text-align: center;
+	font-size: 20px;
+}
+
+.last-form p{
+	margin-top: 10px;
+}
+.load-but{
+	margin-top: 30px;
+	margin-bottom: 20px;
+	text-align: center;
+}
+.last-form{
+	margin-bottom: 50px;
+}
+.course-form{
+	width: 530px;
+}

@@ -1,0 +1,36 @@
+<div class="first-form form">
+  <h2>Итак, вы хотите учиться в школе программирования...</h2>
+  <form 
+    method="POST" 
+    action="" 
+    name="firstForm" 
+    data-ng-submit="submitForm(firstForm.$valid)" 
+    novalidate>
+    <label for="name">
+      Ваши фамилия-имя-отчество<span class="important">*</span>
+    </label>
+    <input 
+      type="text" 
+      name="name" 
+      id="name" 
+      placeholder="Иванов Иван Иванович" 
+      data-ng-model="student.name" 
+      data-ng-pattern="namePattern" 
+      ng-class="{ 'has-error' : firstForm.name.$invalid && subm}" 
+      required>
+    <label for="age">
+      Сколько вам лет?<span class="important">*</span>
+    </label>
+    <input 
+      type="number" 
+      name="age" 
+      id="age" 
+      placeholder="20" 
+      min="8" 
+      max="60" 
+      data-ng-model="student.age" 
+      data-ng-pattern="agePattern"
+      ng-class="{ 'has-error' : firstForm.age.$invalid && subm }" required>
+    <input type="submit" value="Хочу учиться в Ш++!" data-ng-click="subm=true">
+  </form>
+</div>

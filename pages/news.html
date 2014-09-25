@@ -1,0 +1,63 @@
+<div class="news-container container">
+  <div class='news-row' id='ice'>
+    <div class='news-content'>
+      <h2>
+        Ice Bucket Challenge
+        <span class="news-data">19 августа 2014г.</span>
+      </h2>
+      <div class="content" style="white-space: initial;">
+        <p>
+          Мы не смогли остаться в стороне от <a href="http://uk.wikipedia.org/wiki/Ice_Bucket_Challenge" target="_blank">флешмоба</a>, который охватил уже весь мир! (Билл Гейтс, Тим Кук, Марк Цукерберг &mdash; все приняли вызов).
+          <br>
+          По традиции, и других пригласили поучаствовать&nbsp;:)
+          <br>
+          Им уже решать как &mdash; слегка охладиться и передать эстафету своим жертвам-смельчакам, либо же помочь денежным вкладом благотворительной организации.
+          <br>
+          Ответы не заставили себя ждать!
+        </p>
+        <p>
+          Ответ&nbsp;<a href="https://vk.com/kondrapro" target="_blank">Dmitry&nbsp;Kondratyev</a>:
+          <a href="https://www.youtube.com/watch?v=jvU9jFk5Igk" target="_blank" style="color:#27ae60;border-bottom:1px dashed #27ae60">www.youtube.com/watch...</a> 
+        </p>
+        <p>
+          Ответ&nbsp;<a href="https://www.facebook.com/troppus" target="_blank">Dmitry&nbsp;Risovany</a>:
+          <a href="https://www.youtube.com/watch?v=DXj3IvdLVGU" target="_blank" style="color:#27ae60;border-bottom:1px dashed #27ae60">www.youtube.com/watch...</a>
+        </p>
+        <p>
+          И&nbsp;ответ&nbsp;<a href="http://onix-systems.com/" target="_blank">CEO&nbsp;Оникса</a>:
+          <a href="https://www.evernote.com/shard/s9/sh/80c1081e-c957-4ec4-a74f-e79780e5eb43/771b18a4adbb6c890525f063e82e28e5" target="_blank" style="color:#27ae60;border-bottom:1px dashed #27ae60">www.evernote.com/shard...</a>
+        </p>
+        <p>
+          Побольше бы нашему миру хороших добрых флешмобов&nbsp;:)
+        </p>
+      </div>
+    </div>
+    <div class="news-slider news-video">
+      <iframe width="560" height="315" src="//www.youtube.com/embed/Cyb_rjHRj8I?rel=0" frameborder="0" allowfullscreen></iframe>
+    </div>
+  </div>
+</div>
+<div class="news-container container" data-ng-repeat="news in viewnews">
+  <div class='news-row row{{$index}}' id='{{news.id}}'>
+    <div class='news-content'>
+      <h2>
+        {{ news.title }}
+        <span class="news-data">{{ news.data }}</span>
+      </h2>
+      <div class='content' ng-bind-html="SkipValidation(news.content)">
+        {{ news.content }}
+      </div>
+    </div>
+    <div class="news-more" data-ng-click="showMore($index);">
+      <i class="more-icon"></i><span>Подробнее...</span>
+    </div>
+    <div class="news-close" data-ng-click="closeMore($index);">
+      <i class="more-icon-close"></i><span>Свернуть</span>
+    </div>
+    <div class="news-slider" data-news-slider>
+      <div class="item" data-ng-repeat="item in news.photo">
+          <img data-ng-src="backend/uploads/{{item}}">
+      </div>
+    </div>
+  </div>
+</div>
