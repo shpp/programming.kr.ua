@@ -257,13 +257,7 @@ app.controller('last', function($scope, $http, FileUploader) {
       data: $.param({ img: dataURL, name: $scope.student.name }),
       headers: { 'Content-Type': 'application/x-www-form-urlencoded' }
     }).success(function(data) {
-      angular.element('.addImg').empty();
-      angular.element('.thnx').show();
-      angular.element('.webCamDiv').empty();
-      angular.element('.load-but').empty();
-
-      if (stream.stop) 
-        stream.stop();
+      uploader.onSuccessItem();
     });
   }
   var uploader = $scope.uploader = new FileUploader({
