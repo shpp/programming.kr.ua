@@ -278,18 +278,11 @@ app.controller('last', function($scope, $http, FileUploader) {
     }
   });
   uploader.onSuccessItem = function(fileItem, response, status, headers) {
-    $http({
-      method: 'POST',
-      url: 'backend/upload.php',
-      data: $.param({ img: fileItem['file']['name'], name: $scope.student.name }),
-      headers: { 'Content-Type': 'application/x-www-form-urlencoded' }
-    }).success(function(data) {
-      angular.element('.addImg').empty();
-      angular.element('.thnx').show();
-      angular.element('.load-but').empty();
-      if (typeof(stream) == 'object') 
-        stream.stop();
-    });
+    angular.element('.addImg').empty();
+    angular.element('.thnx').show();
+    angular.element('.load-but').empty();
+    if (typeof(stream) == 'object') 
+      stream.stop();
   };
   var controller = $scope.controller = {
     isImage: function(item) {
