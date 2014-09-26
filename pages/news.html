@@ -54,7 +54,7 @@
     <div class="news-close" data-ng-click="closeMore($index);">
       <i class="more-icon-close"></i><span>Свернуть</span>
     </div>
-    <div class="news-slider" data-news-slider>
+    <div class="news-slider" data-news-slider data-check="{{news.photo}}">
       <div class="item" data-ng-repeat="item in news.photo">
           <img data-ng-src="backend/uploads/{{item}}">
       </div>

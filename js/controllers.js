@@ -85,65 +85,18 @@ app.controller('about', function($scope, $location) {
   });
 });
 
-app.controller('news', function($scope, $http, $window, $timeout) {
+app.controller('news', function($scope, $http) {
   angular.element(document).ready(function () {
-    $scope.limit = [440, 386, 356, 374, 540, 284];
-
     $http({
       method: 'POST',
       url: 'backend/getData.php',
       data: $.param({ news: true }),
       headers: { 'Content-Type': 'application/x-www-form-urlencoded' }
     }).success(function(msg) {
-      $scope.viewnews = msg;
-      for (var i = 0; i < msg.length; i++) {
-        $scope.viewnews[i]['realcontent'] = $scope.viewnews[i]['content'];
-      }
-      $timeout(function() {
-        $scope.checkWindowSize();
-      },0);
+      if (typeof(msg) == 'object')
+        $scope.viewnews = msg;
     });
-
-    angular.element($window).bind('resize', function () {
-      $scope.checkWindowSize();
-    });
-
-    $scope.showMore = function(index) {
-      angular.element('.row'+index).addClass('news-open');
-      $scope.viewnews[index]['content'] = $scope.viewnews[index]['realcontent'];
-    };
-    $scope.closeMore = function(index) {
-      angular.element('.row'+index).removeClass('news-open');
-      $scope.viewnews[index]['content'] = $scope.viewnews[index]['shortcontent'];
-    };
   });
-  $scope.cutContent = function() {
-    for (var i = 0; i < $scope.viewnews.length; i++) {
-      $scope.viewnews[i]['content'] = $scope.viewnews[i]['realcontent'];
-      
-      if ($scope.viewnews[i]['realcontent'].length > $scope.limit[i]) {
-        $scope.viewnews[i]['shortcontent'] = $scope.viewnews[i]['content'].substr(0,$scope.limit[i]) + '...';
-        $scope.viewnews[i]['content'] = $scope.viewnews[i]['shortcontent'];
-        angular.element('.row'+i+' .news-more').show();
-      } else {
-        $scope.viewnews[i]['shortcontent'] = $scope.viewnews[i]['content'];
-        angular.element('.row'+i+' .news-more').hide();
-      }
-    }
-  }
-  $scope.checkWindowSize = function() {
-    var width = angular.element($window).width();
-    $scope.limit = (width < 800) ? [145, 191, 125, 122, 191, 143] :
-      (width < 850 && width > 800) ? [226, 225, 211, 200, 299, 193] :
-      (width < 900 && width > 850) ? [249, 265, 280, 254, 339, 193] :
-      (width < 980 && width > 900) ? [249, 320, 280, 254, 368, 231] :
-      (width < 1120 && width > 980) ? [289, 348, 280, 300, 368, 231] :
-      (width < 1200 && width > 1120) ? [440, 386, 356, 344, 540, 283] : 
-      (width < 1400 && width > 1200) ? [440, 397, 356, 374, 540, 284] : 
-      (width < 1500 && width > 1400) ? [440, 492, 550, 500, 540, 338] : 
-      (width < 1650 && width > 1500) ? [440, 579, 550, 500, 540, 550] : [440, 800, 550, 500, 540, 550];
-    $scope.cutContent();
-  }
 });
 
 app.controller('courses', function($scope, $location, $http) {

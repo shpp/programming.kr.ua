@@ -78,15 +78,18 @@ app.directive("scroll", function($window) {
 
 app.directive('newsSlider', function($timeout) {
   return function(scope, elem, attrs) {
+    var obj = JSON.parse(attrs.check);
     $timeout(function () {
-      elem.owlCarousel({
-        loop: true,
-        margin: 0,
-        nav: true,
-        dots: false,
-        items: 1
-      });
-    }, 0);
+      if (Object.keys(obj).length > 1) {
+        elem.owlCarousel({
+          loop: true,
+          margin: 0,
+          nav: true,
+          dots: false,
+          items: 1
+        });
+      }
+    }, 0);     
   }
 });
 
